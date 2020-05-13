@@ -38,3 +38,29 @@ plot_vectors([a1,v1])
 plt.text(2,3,"(2,3)",fontsize=16)
 plt.tight_layout()
 
+### Linear Transformations
+a1 = np.array([7,0])
+a2 = np.array([0,5])
+A = np.array([[2,1],[1,1]]) #transformation f in standard basis
+v2 =np.dot(A,v1)
+plt.figure(figsize=(8,8))
+plot_vectors([a1, a2])
+v1 = np.array([2,3])
+plot_vectors([v1,v2])
+plt.text(2,3,"v1 =(2,3)",fontsize=16)
+plt.text(6,5,"Av1 = ", fontsize=16)
+plt.text(v2[0],v2[1],"(7,5)",fontsize=16)
+print(v2[1])
+
+# Any matrix defines a linear transformation
+# Every linear transformation may be represented by a matrix. This form is NOT unique (it depends on the chosen bassis - more on that in a moment)
+# We need only define a transformation by saying what it does to a basis
+
+#Norm of a vector
+v = np.array([1,2])
+linalg.norm(v)
+
+#distance between two vectors
+w = np.array([1,1])
+linalg.norm(v-w)
+
